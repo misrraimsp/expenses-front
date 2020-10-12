@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExpenseContainerComponent } from './expense-container/expense-container.component';
@@ -12,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { ExpenseComponent } from './expense/expense.component';
 import { BalanceContainerComponent } from './balance-container/balance-container.component';
 import { TransferContainerComponent } from './transfer-container/transfer-container.component';
+import { AddFriendFormComponent } from './add-friend-form/add-friend-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { TransferContainerComponent } from './transfer-container/transfer-contai
     HomeComponent,
     ExpenseComponent,
     BalanceContainerComponent,
-    TransferContainerComponent
+    TransferContainerComponent,
+    AddFriendFormComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
