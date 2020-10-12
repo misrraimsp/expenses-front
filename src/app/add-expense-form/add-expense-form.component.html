@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div>
+    <label for="amount">Amount:</label>
+    <input
+      formControlName="amount"
+      id="amount"
+      type="number">
+    <div class="form-error" *ngIf="amount.touched && amount.invalid">
+      <span>This field is required</span>
+    </div>
+  </div>
+  <div>
+    <label for="payerId">Who pays?:</label>
+    <select formControlName="payerId" id="payerId">
+      <option></option>
+      <option *ngFor="let p of people" [value]="p.id">{{p.firstName + ' ' + p.lastName}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input
+      formControlName="description"
+      id="description"
+      type="text">
+    <div class="form-error" *ngIf="description.touched && description.invalid">
+      <span>This field is required</span>
+    </div>
+  </div>
+  <button type="submit">Add Expense</button>
+</form>

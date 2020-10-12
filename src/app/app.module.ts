@@ -15,6 +15,7 @@ import { BalanceContainerComponent } from './balance-container/balance-container
 import { TransferContainerComponent } from './transfer-container/transfer-container.component';
 import { AddFriendFormComponent } from './add-friend-form/add-friend-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddExpenseFormComponent } from './add-expense-form/add-expense-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExpenseComponent,
     BalanceContainerComponent,
     TransferContainerComponent,
-    AddFriendFormComponent
+    AddFriendFormComponent,
+    AddExpenseFormComponent
   ],
   imports: [
     CommonModule,

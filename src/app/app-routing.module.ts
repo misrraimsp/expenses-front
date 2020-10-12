@@ -5,13 +5,15 @@ import {ExpenseContainerComponent} from './expense-container/expense-container.c
 import {BalanceContainerComponent} from './balance-container/balance-container.component';
 import {TransferContainerComponent} from './transfer-container/transfer-container.component';
 import {AddFriendFormComponent} from './add-friend-form/add-friend-form.component';
+import {AddExpenseFormComponent} from './add-expense-form/add-expense-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'expenses', component: ExpenseContainerComponent},
   { path: 'balance', component: BalanceContainerComponent},
   { path: 'transfers', component: TransferContainerComponent},
-  { path: 'addfriend', component: AddFriendFormComponent}
+  { path: 'addfriend', component: AddFriendFormComponent},
+  { path: 'addexpense', component: AddExpenseFormComponent}
 ];
 
 @NgModule({
