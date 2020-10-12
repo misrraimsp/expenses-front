@@ -7,13 +7,15 @@ import {Observable} from 'rxjs';
 })
 export class  DataService {
 
-  constructor(private url: string, private http: HttpClient) { }
+  private BASE_URL = 'http://localhost:8080';
+
+  constructor(private resourceUrl: string, private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get(this.url);
+    return this.http.get(this.BASE_URL + this.resourceUrl);
   }
 
   create(resource): Observable<any> {
-    return this.http.post(this.url, resource);
+    return this.http.post(this.BASE_URL + this.resourceUrl, resource);
   }
 }

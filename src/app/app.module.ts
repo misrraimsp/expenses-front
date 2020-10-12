@@ -10,6 +10,8 @@ import { BalanceComponent } from './balance/balance.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { HomeComponent } from './home/home.component';
 import { ExpenseComponent } from './expense/expense.component';
+import { BalanceContainerComponent } from './balance-container/balance-container.component';
+import { TransferContainerComponent } from './transfer-container/transfer-container.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ExpenseComponent } from './expense/expense.component';
     BalanceComponent,
     TransferComponent,
     HomeComponent,
-    ExpenseComponent
+    ExpenseComponent,
+    BalanceContainerComponent,
+    TransferContainerComponent
   ],
   imports: [
     BrowserModule,

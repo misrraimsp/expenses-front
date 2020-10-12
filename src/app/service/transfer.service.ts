@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { DataService } from './data.service';
 import { HttpClient } from '@angular/common/http';
+import { DataService } from './data.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExpenseService extends DataService{
+export class TransferService extends DataService{
 
   constructor(http: HttpClient) {
-    super('/expenses', http);
+    super('/transfers', http);
   }
 }
