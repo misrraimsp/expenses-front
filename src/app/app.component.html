@@ -1,4 +1,2 @@
-<h1>{{title}}</h1>
-<div *ngFor="let expense of expenses">
-  <app-expense [expense]="expense" (addExp)="doPost()"></app-expense>
-</div>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
