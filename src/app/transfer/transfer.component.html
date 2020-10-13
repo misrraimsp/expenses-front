@@ -1,4 +1,4 @@
 <div class="transfer-grid-container">
-  <div class="grid-item1 transfer-amount">{{ transfer.amount + '€ ' }}</div>
+  <div class="grid-item1">{{ transfer.amount | currency:'EUR'}}</div>
   <div class="grid-item2">{{ transfer.issuerFirstName + ' ' + transfer.issuerLastName + ' &rarr; ' + transfer.recipientFirstName + ' ' + transfer.recipientLastName }}</div>
 </div>

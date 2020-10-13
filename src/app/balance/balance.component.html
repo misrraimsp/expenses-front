@@ -1,4 +1,8 @@
 <div class="balance-grid-container">
   <div class="grid-item1">{{balanceInfo.firstName + ' ' + balanceInfo.lastName}}</div>
-  <div class="grid-item2">{{balanceInfo.balance + ' €'}}</div>
+  <div class="grid-item2"
+    [class.positive]="balanceInfo.balance >= 0"
+    [class.negative]="balanceInfo.balance < 0">
+    {{balanceInfo.balance | currency:'EUR'}}
+  </div>
 </div>

@@ -1,7 +1,7 @@
 
 <div class="expense-grid-container">
   <div class="grid-item1">{{expense.payerFirstName + ' ' + expense.payerLastName}}</div>
-  <div class="grid-item2">{{'(' + expense.amount + ' €)'}}</div>
-  <div class="grid-item3"><em>{{expense.description}}</em></div>
-  <div class="grid-item4">{{expense.date}}</div>
+  <div class="grid-item2">{{expense.amount | currency:'EUR'}}</div>
+  <div class="grid-item3">{{expense.description}}</div>
+  <div class="grid-item4">{{expense.date | date:'medium'}}</div>
 </div>

@@ -26,6 +26,7 @@
 }
 
 .grid-item3 {
+  font-weight: lighter;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -33,6 +34,8 @@
 }
 
 .grid-item4 {
+  font-weight: lighter;
+  font-size: smaller;
   justify-self: right;
   grid-column-start: 2;
   grid-column-end: 3;

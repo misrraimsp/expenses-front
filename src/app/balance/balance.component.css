@@ -16,6 +16,15 @@
 
 .grid-item2 {
   justify-self: right;
+  font-weight: bold;
   grid-column-start: 2;
   grid-column-end: 3;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
 }

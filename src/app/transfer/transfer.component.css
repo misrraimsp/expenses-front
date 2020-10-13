@@ -1,8 +1,3 @@
-.transfer-amount {
-  color: #4CAF50;
-  font-weight: bold;
-}
-
 .transfer-grid-container {
   display: grid;
   grid-template-columns: 100px 300px;
@@ -17,6 +12,7 @@
 .grid-item1 {
   grid-column-start: 1;
   grid-column-end: 2;
+  font-weight: bold;
 }
 
 .grid-item2 {
