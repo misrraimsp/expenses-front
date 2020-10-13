@@ -40,7 +40,7 @@ export class AddExpenseFormComponent implements OnInit {
   get description(): FormControl{ return this.form.get('description') as FormControl; }
 
   onSubmit(): void {
-    console.log(new Expense(this.amount.value, this.payerId.value, this.description.value));
+    // console.log(new Expense(this.amount.value, this.payerId.value, this.description.value));
     this.expenseServer.create(new Expense(this.amount.value, this.payerId.value, this.description.value)).subscribe((response: Person) => {
       console.log(response);
       this.router.navigate(['/']);

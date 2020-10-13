@@ -1,0 +1,41 @@
+.expense-grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: auto auto;
+  grid-gap: 25px;
+  font-family: sans-serif;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 16px 32px;
+  margin: 7px;
+}
+
+.grid-item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.grid-item2 {
+  justify-self: right;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.grid-item3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.grid-item4 {
+  justify-self: right;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}

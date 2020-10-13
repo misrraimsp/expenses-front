@@ -1,7 +1,7 @@
-<ul>
-  <li *ngFor="let t of transfers">
-    <div class="transfer-frame">
+<div class="grid-container">
+  <div class="grid-item flex-container-col">
+    <div *ngFor="let t of transfers">
       <app-transfer [transfer]="t"></app-transfer>
     </div>
-  </li>
-</ul>
+  </div>
+</div>

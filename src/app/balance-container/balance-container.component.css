@@ -1,6 +1,18 @@
-.balance-frame {
-  border: 1px solid black;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 500px auto;
+  grid-template-rows: 25px auto;
+  grid-gap: 25px;
+}
+
+.grid-item {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.flex-container-col {
+  display: flex;
+  flex-direction: column;
 }

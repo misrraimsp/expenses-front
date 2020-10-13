@@ -1,7 +1,7 @@
-<ul>
-  <li *ngFor="let b of balances">
-    <div class="balance-frame">
+<div class="grid-container">
+  <div class="grid-item flex-container-col">
+    <div *ngFor="let b of balances">
       <app-balance [balanceInfo]="b"></app-balance>
     </div>
-  </li>
-</ul>
+  </div>
+</div>

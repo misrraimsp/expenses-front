@@ -1,7 +1,13 @@
-<ul>
-  <li *ngFor="let expense of expenses">
-    <div class="expense-frame">
+
+<div class="grid-container">
+  <div class="grid-item1 flex-container">
+    <button class="button" (click)="onAddExpense()">Add Expense</button>
+    <button class="button" (click)="onAddFriend()">Add Friend</button>
+  </div>
+  <div class="grid-item2 flex-container-col">
+    <div class="" *ngFor="let expense of expenses">
       <app-expense [expense]="expense"></app-expense>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
+

@@ -2,3 +2,25 @@
   color: #4CAF50;
   font-weight: bold;
 }
+
+.transfer-grid-container {
+  display: grid;
+  grid-template-columns: 100px 300px;
+  grid-gap: 25px;
+  font-family: sans-serif;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 16px 32px;
+  margin: 7px;
+}
+
+.grid-item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.grid-item2 {
+  justify-self: right;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
