@@ -1,20 +1,25 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="firstname">First Name:</label>
-    <input
-      formControlName="firstname"
-      id="firstname"
-      type="text">
-    <div class="form-error" *ngIf="firstName.touched && firstName.invalid">
-      <span>This field is required</span>
+<div class="grid-container">
+  <form class="grid-item flex-container-col form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+      <label for="firstname">First Name:</label>
+      <input
+        formControlName="firstname"
+        id="firstname"
+        type="text">
+      <div class="field-error" *ngIf="firstName.touched && firstName.invalid">
+        <span>This field is required</span>
+      </div>
     </div>
-  </div>
-  <div>
-    <label for="lastname">Last Name:</label>
-    <input
-      formControlName="lastname"
-      id="lastname"
-      type="text">
-  </div>
-  <button type="submit">Add</button>
-</form>
+    <div class="form-input">
+      <label for="lastname">Last Name:</label>
+      <input
+        formControlName="lastname"
+        id="lastname"
+        type="text">
+      <div class="field-error" *ngIf="lastName.touched && lastName.invalid">
+        <span>This field is not valid</span>
+      </div>
+    </div>
+    <button class="submit-button" type="submit" [disabled]="form.invalid">Add Friend</button>
+  </form>
+</div>

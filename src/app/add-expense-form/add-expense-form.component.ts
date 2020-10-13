@@ -24,7 +24,7 @@ export class AddExpenseFormComponent implements OnInit {
     this.form = fb.group({
       amount: ['', Validators.required],
       payerId: ['', Validators.required],
-      description: ['', Validators.required]
+      description: ['']
     });
   }
 

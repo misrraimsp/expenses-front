@@ -16,7 +16,7 @@ export class AddFriendFormComponent {
   constructor(fb: FormBuilder, private server: BalanceService, private router: Router) {
     this.form = fb.group({
       firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+      lastname: ['']
     });
   }
 
