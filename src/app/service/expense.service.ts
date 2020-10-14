@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ExpenseService extends DataService{
+export class ExpenseService extends DataService {
 
   constructor(http: HttpClient) {
     super('/expenses', http);

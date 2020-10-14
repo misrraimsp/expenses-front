@@ -7,7 +7,5 @@ import { Transfer } from '../model/transfer';
   styleUrls: ['./transfer.component.css']
 })
 export class TransferComponent {
-
   @Input() public transfer: Transfer;
-
 }

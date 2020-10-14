@@ -5,17 +5,20 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class  DataService {
+export class DataService {
 
-  private BASE_URL = 'http://localhost:8080';
+  private readonly BASE_URL = 'http://localhost:8080';
+  private readonly url: string;
 
-  constructor(private resourceUrl: string, private http: HttpClient) { }
+  constructor(private resourceUrl: string, private http: HttpClient) {
+    this.url = this.BASE_URL + resourceUrl;
+  }
 
   getAll(): Observable<any> {
-    return this.http.get(this.BASE_URL + this.resourceUrl);
+    return this.http.get(this.url);
   }
 
   create(resource): Observable<any> {
-    return this.http.post(this.BASE_URL + this.resourceUrl, resource);
+    return this.http.post(this.url, resource);
   }
 }

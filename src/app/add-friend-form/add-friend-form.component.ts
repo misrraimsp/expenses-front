@@ -20,12 +20,11 @@ export class AddFriendFormComponent {
     });
   }
 
-  get firstName(): FormControl{ return this.form.get('firstname') as FormControl; }
-
-  get lastName(): FormControl{ return this.form.get('lastname') as FormControl; }
+  get firstname(): FormControl{ return this.form.get('firstname') as FormControl; }
+  get lastname(): FormControl{ return this.form.get('lastname') as FormControl; }
 
   onSubmit(): void {
-    this.server.create(new Person(this.firstName.value, this.lastName.value)).subscribe((response: Person) => {
+    this.server.create(new Person(this.firstname.value, this.lastname.value)).subscribe((response: Person) => {
       console.log(response);
       this.router.navigate(['/balance']);
     });
