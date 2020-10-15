@@ -1,55 +1,38 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { By } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
 
 describe('AppComponent', () => {
+
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent,
-        NavbarComponent
-      ],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent, NavbarComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create the app-component', () => {
+    expect(component).toBeTruthy();
   });
 
   it('should render the navbar', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const de = fixture.debugElement;
-    expect(de.query(By.css('app-navbar'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('app-navbar'))).toBeTruthy();
   });
 
   it('should render the router-outlet', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const de = fixture.debugElement;
-    expect(de.query(By.css('router-outlet'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.directive(RouterOutlet))).toBeTruthy();
   });
 
-  /*
-  it(`should have as title 'first-spa'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('first-spa');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('first-spa app is running!');
-  });
-
-   */
 });

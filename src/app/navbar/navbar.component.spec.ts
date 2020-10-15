@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
 import { By } from '@angular/platform-browser';
+import {RouterLink, RouterLinkWithHref} from '@angular/router';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -24,9 +25,14 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render 3 links', () => {
-    const de = fixture.debugElement;
-    expect(de.queryAll(By.css('a')).length).toBe(3);
+  it('should have a link to home page', () => {
+    // const de = fixture.debugElement.query(By.css('a[href="/balance"]'));
+    const des = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+
+    const index = des.findIndex(de => de.properties.href === '/balance');
+
+    expect(index).toBeGreaterThan(-1);
+    // expect(de).toBeTruthy();
   });
 
 });
