@@ -25,7 +25,7 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a link to home page', () => {
+  xit('should have a link to home page', () => {
     // const de = fixture.debugElement.query(By.css('a[href="/balance"]'));
     const des = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
 
