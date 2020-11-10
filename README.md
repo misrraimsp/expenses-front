@@ -1,27 +1,45 @@
-# FirstSpa
+# Expenses-Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+## Table of contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
+* [Copyright](#copyright)
+* [References](#references)
 
-## Development server
+## General Info
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4. Its main goal is to consume the API developed [here](https://github.com/misrraimsp/expenses-back).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Docker image for this project can be downloaded from [here](https://hub.docker.com/repository/docker/misrrasp/autenchallenge-front).
 
-## Code scaffolding
+For more info:
+- [Functional Requirements.pdf](https://github.com/misrraimsp/expenses-front/blob/master/Functional%20Requirements.pdf)
+- [Frontend Requirements.pdf](https://github.com/misrraimsp/expenses-front/blob/master/Frontend%20Requirements.pdf)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
+Project is created with:
+* Angular
+* TypeScript
+* JavaScript
+* IntelliJ IDEA
+* CSS Grid
+* CSS Flexbox
+* Jasmine
+* Karma
+* Git
+* Docker
 
-## Build
+## Copyright
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- **year**: 2020
+- **project name**: expenses-front
+- **author**: MISRRAIM SUÁREZ PÉREZ
+- **mail**: misrraimsp@gmail.com
+- **last version**: 15/10/2020
 
-## Running unit tests
+## References
+- [How to Create an Angular Dockerfile](https://medium.com/better-programming/how-to-create-an-angular-dockerfile-75c059e7f8e8)
+- [Angular: Up and Running](https://learning.oreilly.com/library/view/angular-up-and/9781491999820/)
+- [Code repository for the Angular: Up & Running Book](https://github.com/shyamseshadri/angular-up-and-running)
+- [Angular Crash Course for Busy Developers](https://www.udemy.com/certificate/UC-321a68ff-5aaa-418b-a4f1-0cac55ad9c98/)
+- [Testing Angular Apps with Jasmine](https://www.udemy.com/certificate/UC-f857f964-f35b-48e7-b36f-26a9ff662a82/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
